@@ -1,12 +1,13 @@
 # SGIH — Monitoramento do Service Desk
 
 Preview em Python do painel SGIH para acompanhar PABX, tarefas Kanban e WhatsApp.
-O painel está em modo de demonstração e usa dados ilustrativos, sem conexões externas.
+O preview executa o módulo original em `streamlit_export/dashboard.py`. Sem credenciais,
+mostra avisos de configuração e não tenta autenticar nos serviços externos.
 
 ## Run & Operate
 
-- `uv run streamlit run app.py --server.port 5000 --server.address 0.0.0.0 --server.headless true --server.enableCORS=false --server.enableWebsocketCompression=false` — executar o preview Python
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- `uv run streamlit run app.py --server.port 5000 --server.address 0.0.0.0 --server.headless true --server.enableCORS=false --server.enableWebsocketCompression=false --server.baseUrlPath=streamlit` — executar o preview Python
+- `pnpm --filter @workspace/api-server run dev` — executar a API compartilhada em `/api`
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
@@ -34,7 +35,8 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 ## Product
 
 O preview apresenta o status dos agentes PABX, tarefas pendentes do Kanban e
-disponibilidade dos usuários WhatsApp em uma visão geral do Service Desk.
+disponibilidade dos usuários WhatsApp, usando o código Python original enviado.
+O pacote independente para importar no Streamlit fica em `streamlit_export/`.
 
 ## User preferences
 

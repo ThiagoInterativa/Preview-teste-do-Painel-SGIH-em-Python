@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "SGIH Preview"
+description = "Rota raiz para abrir o painel SGIH existente em Python/Streamlit no preview do projeto."
+version = "1.0.0"
+id = "artifacts/sgih-preview"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19643
+
+[services.development]
+run = "pnpm --filter @workspace/sgih-preview run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/sgih-preview", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/sgih-preview/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19643"
+BASE_PATH = "/"

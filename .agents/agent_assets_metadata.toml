@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "Wom2l09aZbMblvA8epBiK"
+uri = "file://generated-artifacts/sgih-streamlit-import.html"
+type = "html"
+title = "Pacote do SGIH para importar no Streamlit"
+description = "Abra a página e use o botão para baixar o projeto .zip pronto para conectar ao Streamlit Community Cloud."
+logical_id = "7491edf2-2478-4f22-a88f-26e89ac1ab9c"
+content_hash = "sha256:81113e7c25d1ade890bca3a3a5807ef3014996d925011ac09bc099e1e438b3b1"
+size = 14748
+mtime_ms = 1792155637622
+storage_uri = "gcs://replit-rams-assets-worf/rams/assets/repl:c8ee269e-90eb-4ad0-be9f-8e3a77a69c11/7491edf2-2478-4f22-a88f-26e89ac1ab9c/2ba3a6a4-0688-4cbf-a72b-351ca195693e"
+storage_version_token = "1792155665419814"
+content_type = "text/html"
