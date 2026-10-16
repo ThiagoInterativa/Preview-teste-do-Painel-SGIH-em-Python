@@ -1,9 +1,11 @@
-# [Project name]
+# SGIH — Monitoramento do Service Desk
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Preview em Python do painel SGIH para acompanhar PABX, tarefas Kanban e WhatsApp.
+O painel está em modo de demonstração e usa dados ilustrativos, sem conexões externas.
 
 ## Run & Operate
 
+- `uv run streamlit run app.py --server.port 5000 --server.address 0.0.0.0 --server.headless true --server.enableCORS=false --server.enableWebsocketCompression=false` — executar o preview Python
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
@@ -13,6 +15,7 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Stack
 
+- Python 3.11, Streamlit
 - pnpm workspaces, Node.js 24, TypeScript 5.9
 - API: Express 5
 - DB: PostgreSQL + Drizzle ORM
@@ -30,7 +33,8 @@ _Populate as you build — non-obvious choices a reader couldn't infer from the 
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+O preview apresenta o status dos agentes PABX, tarefas pendentes do Kanban e
+disponibilidade dos usuários WhatsApp em uma visão geral do Service Desk.
 
 ## User preferences
 

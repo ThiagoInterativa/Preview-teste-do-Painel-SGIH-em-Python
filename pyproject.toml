@@ -1,0 +1,8 @@
+[project]
+name = "repl-nix-workspace"
+version = "0.1.0"
+description = "Preview em Streamlit do painel de monitoramento SGIH"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.66.0",
+]
